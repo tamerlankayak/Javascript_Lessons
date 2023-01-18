@@ -39,7 +39,7 @@ for (let i = jonas3.length; i >= 0; i--) {
 }
 
 for (let exercise = 1; exercise < 4; exercise++) {
-    console.log(`------Startnig exercise ${exercise}`)
+    console.log(`------Starting exercise ${exercise}`)
 
 
     for (let rep = 1; rep <= 6; rep++) {
@@ -47,7 +47,7 @@ for (let exercise = 1; exercise < 4; exercise++) {
     }
 
 }
-
+//test commit
 console.log('--------While loop-----');
 
 let rep = 1;
