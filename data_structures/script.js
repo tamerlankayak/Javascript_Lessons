@@ -17,7 +17,7 @@ const restaurant = {
       close: 22,
     },
     fri: {
-      open: 1,
+      aciq: 1,
       close: 23,
     },
     sat: {
@@ -39,8 +39,100 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delievred to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your declicious pasta with ${ing1},  ${ing2} and ${ing3}`
+    );
+  },
+
+  orderPizza: function (mainIngrediant, ...otherIngrediants) {
+    console.log(mainIngrediant);
+    console.log(otherIngrediants);
+  },
 };
 
+const arr = [1, 2, ...[3, 4]];
+
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+
+//objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+//functions
+
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+
+add(2, 3);
+add(1, 5, 43, 3, 4, 34, 4);
+add(3.433, 43, 4, 34, 34);
+
+const x = [23, 5, 7];
+add(...x);
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+restaurant.orderPizza('mushrooms');
+
+/*
+const newRestaurant = { foundIn: 1998, ...restaurant, founder: 'Guiseppe' };
+console.log(newRestaurant);
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Risotrante Roma';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
+*/
+/*
+const arr = [7, 8, 9];
+
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+
+console.log(newArr);
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+
+const str = 'Jonas';
+const letters = [...str, '', 'S.'];
+console.log(letters);
+console.log(...str);
+
+const ingrediants = [
+  prompt("Let's make pasta! Ingrediant 1?"),
+  prompt("Let's make pasta! Ingrediant 2?"),
+  prompt("Let's make pasta! Ingrediant 3?"),
+];
+
+console.log(ingrediants);
+
+restaurant.orderPasta(ingrediants[0], ingrediants[1], ingrediants[2]);
+restaurant.orderPasta(...ingrediants);
+*/
+
+/*
 restaurant.orderDelivery({
   time: '22:30',
   address: 'Via del sole , 21',
@@ -76,10 +168,12 @@ const obj = { a: 23, b: 7, c: 14 };
 console.log(a, b);
 
 const {
-  fri: { open: o, close: c },
+  fri: { aciq: o, close: c },
 } = openingHours;
 
 console.log(o, c);
+
+*/
 
 /*
 const arr = [2, 3, 4];
