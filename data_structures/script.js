@@ -87,6 +87,8 @@ add(...x);
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
 
+
+//test commit
 /*
 const newRestaurant = { foundIn: 1998, ...restaurant, founder: 'Guiseppe' };
 console.log(newRestaurant);
