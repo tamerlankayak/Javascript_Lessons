@@ -5,4 +5,4 @@ Everything about Javascript.
 
 Learning from basics to advanced.
 
-![Unofficial_JavaScript_logo_2](https://user-images.githubusercontent.com/29164777/226197957-4e264db8-8c25-4ec8-8c31-71de39a55cc6.svg)
+![Screenshot 2023-03-19 222111](https://user-images.githubusercontent.com/29164777/226198579-345c5083-4970-4816-8ae0-2d1318c58a3f.png)
